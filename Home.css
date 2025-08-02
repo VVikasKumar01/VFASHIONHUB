@@ -1,0 +1,348 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body{
+    background: linear-gradient(to left,rgb(15, 19, 61),rgb(6, 6, 8));
+
+}
+.navbar {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+@keyframes animate {
+  0% {
+    transform: scale(0, 0.005);
+  }
+  50% {
+    transform: scaleY(0.005);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+/* Fade-slide for brand name */
+.animated-brand {
+  animation: fadeSlideIn 1.2s ease-out;
+}
+
+/* Main headline animation */
+.main-heading {
+  font-family: "Georgia", serif;
+  font-weight: bold;
+  font-size: 200px;
+  color: #ffffff;
+  animation: scaleIn 1s ease-out;
+  animation-delay: 0.3s;
+  animation-fill-mode: both;
+}
+
+/* Subtext animation */
+.subtext {
+  font-size: 1.2rem;
+  color: rgb(180, 180, 180);
+  animation: fadeInUp 1.4s ease-out;
+  animation-delay: 0.6s;
+  animation-fill-mode: both;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+/* Animations */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+#Home{
+    padding: 100px;
+    background: linear-gradient(to left,rgb(15, 19, 61),rgb(6, 6, 8));
+    color: aliceblue;
+    height: 100%;
+    width: 100%;
+}
+@media screen and (min-width: 328px) and (max-width: 968px) {
+  .Home-heading {
+    font-size: 75px;
+  }
+}
+
+.nav-bg{
+    background-color: black;
+}
+/**/
+
+
+
+.slider{
+    width: 100%;
+    height: var(--height);
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        #000 10% 90%,
+        transparent
+    );
+}
+.slider .list{
+    display: flex;
+    width: 100%;
+    min-width: calc(var(--width) * var(--quantity));
+    position: relative;
+}
+.slider .list .item{
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    left: 100%;
+    animation: autoRun 10s linear infinite;
+    transition: filter 0.5s;
+    animation-delay: calc( (10s / var(--quantity)) * (var(--position) - 1) - 10s)!important;
+}
+.slider .list .item img{
+    width: 100%;
+}
+@keyframes autoRun{
+    from{
+        left: 100%;
+    }to{
+        left: calc(var(--width) * -1);
+    }
+}
+.slider:hover .item{
+    animation-play-state: paused!important;
+    filter: grayscale(1);
+}
+.slider .item:hover{
+    filter: grayscale(0);
+}
+
+.img-h{
+    height: 600px;
+    width: 100%;
+}
+.img-v{
+    height: 300px;
+    width: 50%;
+}
+#sectionProduct h1{
+    color: #fff;
+}
+.card {
+  height: 350px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  padding: 18px;
+  margin-bottom: 26px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  z-index: 1;
+}
+
+/* Zoom on hover */
+.card:hover {
+  transform: scale(1.07);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}
+
+/* Uneven ripple effect */
+.card::before {
+  content: '';
+  position: absolute;
+  top: -25%;
+  left: -25%;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, transparent 70%);
+  transform: scale(0) skew(15deg, 10deg);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.8s ease-out, opacity 0.4s ease-out;
+  z-index: 2;
+  border-radius: 50%;
+}
+
+/* Trigger ripple on hover */
+.card:hover::before {
+  transform: scale(2.5) skew(25deg, 15deg);
+  opacity: 1;
+}
+
+
+/******* Our Team ******/
+#our-team {
+    background-color: transparent;  /* Darker background */
+    color: #fff;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.team-member {
+    text-align: center;
+    background-color: #333;  /* Dark background for team cards */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+}
+
+.team-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover .team-img {
+    transform: scale(1.1);
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+p.bio {
+    font-style: italic;
+    color: #ccc;  /* Lighter grey for bio text */
+}
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #ff6347;  /* Red color for hover effect */
+}
+
+.social-icon.linkedin:hover {
+    color: #0A66C2;
+}
+
+.social-icon.github:hover {
+    color: #6e5494;
+}
+
+
+
+/******* Footer *******/
+.footer {
+    background-color: #111;  /* Dark background for footer */
+    color: #ddd;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #ddd;
+}
+
+.footer a:hover {
+    color: #ff6347;  /* Red hover effect */
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+.footer-social {
+    margin-top: 20px;
+}
+
+.footer-icon {
+    font-size: 2rem;
+    margin: 0 15px;
+}
+
+.footer-icon:hover {
+    color: #ff6347;  /* Red color for hover */
+}
+
+.footer-icon.linkedin:hover {
+    color: #0A66C2;
+}
+
+.footer-icon.github:hover {
+    color: #6e5494;
+}
+
+.footer-icon.instagram:hover {
+    color: #E1306C;
+}
+
+.footer-icon.twitter:hover {
+    color: #1DA1F2;
+}
+
+.footer-copyright {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
