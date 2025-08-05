@@ -11,7 +11,6 @@ body{
 }
 
 #Home{
-    padding-top: 200px;
     background: linear-gradient(to left,rgb(15, 19, 61),rgb(6, 6, 8));
     color: aliceblue;
     height: 100%;
@@ -367,6 +366,7 @@ p.bio {
     margin-top: 15px;
     font-size: 0.9rem;
 }
+
 
 
 
