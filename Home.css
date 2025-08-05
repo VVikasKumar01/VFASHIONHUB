@@ -57,6 +57,11 @@ body{
 }
 
 /* Main headline animation */
+.Brand p{  
+  animation: fadeInUp 1.4s ease-out;
+  animation-delay: 0.6s;
+  animation-fill-mode: both;
+}
 .main-heading {
   font-family: "Georgia", serif;
   font-weight: bold;
@@ -366,6 +371,7 @@ p.bio {
     margin-top: 15px;
     font-size: 0.9rem;
 }
+
 
 
 
