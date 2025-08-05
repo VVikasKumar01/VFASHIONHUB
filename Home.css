@@ -53,7 +53,7 @@ body{
 .main-heading {
   font-family: "Georgia", serif;
   font-weight: bold;
-  font-size: 200px;
+  font-size: 140px;
   text-align: center;
   color: #ffffff;
   animation: scaleIn 1s ease-out;
@@ -120,6 +120,9 @@ body{
   .subtext{
     font-size: 12px;
   }
+  p{
+    font-size: 12px;
+  }
 }  
 @media screen and (min-width:658px) and (max-width:728px){
   .main-heading {
@@ -128,15 +131,13 @@ body{
   .subtext{
     font-size: 12px;
   }
+  p{
+    font-size: 12px;
+  }
 }
 @media screen and (min-width: 728px) and (max-width: 1045px) {
   .main-heading {
     font-size: 75px;
-  }
-}
-@media screen and (min-width: 1045px) and (max-width: 1375px) {
-  .main-heading {
-    font-size: 140px;
   }
 }
 
