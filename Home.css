@@ -117,7 +117,7 @@ body{
     font-size: 75px;
   }
 }
-@media screen and (min-width: 968px) and (max-width: 1098px) {
+@media screen and (min-width: 968px) and (max-width: 1225px) {
   .main-heading {
     font-size: 150px;
   }
@@ -348,6 +348,7 @@ p.bio {
     margin-top: 15px;
     font-size: 0.9rem;
 }
+
 
 
 
