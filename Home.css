@@ -112,12 +112,17 @@ body{
     height: 100%;
     width: 100%;
 }
-@media screen and (min-width: 328px) and (max-width: 968px) {
+@media screen and (max-width:328px){
+  .main-heading {
+    font-size:60px;
+  }
+}
+@media screen and (min-width: 328px) and (max-width: 1025px) {
   .main-heading {
     font-size: 75px;
   }
 }
-@media screen and (min-width: 968px) and (max-width: 1325px) {
+@media screen and (min-width: 1025px) and (max-width: 1375px) {
   .main-heading {
     font-size: 140px;
   }
@@ -348,6 +353,7 @@ p.bio {
     margin-top: 15px;
     font-size: 0.9rem;
 }
+
 
 
 
