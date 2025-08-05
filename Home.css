@@ -115,7 +115,7 @@ body{
 }
 @media screen and (max-width:658px){
   .main-heading {
-    font-size:40px;
+    font-size:30px;
   }
   .subtext{
     font-size: 12px;
@@ -366,6 +366,7 @@ p.bio {
     margin-top: 15px;
     font-size: 0.9rem;
 }
+
 
 
 
