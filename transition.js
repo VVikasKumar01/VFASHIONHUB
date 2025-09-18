@@ -30,3 +30,18 @@ document.querySelectorAll('.card').forEach(card => {
         }, 600); // Duration of the animation
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    var productModal = document.getElementById('productModal');
+    $('#productModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget); 
+        var img = button.data('img');
+        var title = button.data('title');
+        var desc = button.data('desc');
+        $('#modalProductImg').attr('src', img);
+        $('#productModalLabel').text(title);
+        $('#modalProductDesc').text(desc);
+    });
+});
+
