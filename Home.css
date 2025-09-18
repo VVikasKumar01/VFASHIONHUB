@@ -194,60 +194,34 @@ body{
     filter: grayscale(0);
 }
 
-.img-h{
-    height: 600px;
-    width: 100%;
+/* product section*/
+.product-card {
+    position: relative;
+    overflow: hidden;
 }
-.img-v{
-    height: 300px;
-    width: 50%;
+.product-card img {
+    transition: transform 0.3s;
 }
-#sectionProduct h1{
-    color: #fff;
+.product-card:hover img {
+    transform: scale(1.07);
+    filter: brightness(0.85);
 }
-.card {
-  height: 350px;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  padding: 18px;
-  margin-bottom: 26px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
-  z-index: 1;
+.product-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    display: flex;
+    justify-content: center; align-items: center;
+    background: rgba(0,0,0,0.4);
+    opacity: 0;
+    transition: opacity 0.3s;
 }
-
-/* Zoom on hover */
-.card:hover {
-  transform: scale(1.07);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+.product-card:hover .product-overlay {
+    opacity: 1;
 }
-
-/* Uneven ripple effect */
-.card::before {
-  content: '';
-  position: absolute;
-  top: -25%;
-  left: -25%;
-  width: 150%;
-  height: 150%;
-  background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, transparent 70%);
-  transform: scale(0) skew(15deg, 10deg);
-  opacity: 0;
-  pointer-events: none;
-  transition: transform 0.8s ease-out, opacity 0.4s ease-out;
-  z-index: 2;
-  border-radius: 50%;
+.view-details-btn {
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
 }
-
-/* Trigger ripple on hover */
-.card:hover::before {
-  transform: scale(2.5) skew(25deg, 15deg);
-  opacity: 1;
-}
-
 
 /******* Our Team ******/
 #our-team {
@@ -371,6 +345,7 @@ p.bio {
     margin-top: 15px;
     font-size: 0.9rem;
 }
+
 
 
 
