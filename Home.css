@@ -194,60 +194,73 @@ body{
     filter: grayscale(0);
 }
 
-/* product section*/
+/* Product Section */
+#sectionProduct h1 {
+  color: #fff;
+  font-weight: bold;
+}
 
-.img-h{
-    height: 600px;
-    width: 100%;
-}
-.img-v{
-    height: 300px;
-    width: 50%;
-}
-#sectionProduct h1{
-    color: #fff;
-}
-.card {
-  height: 350px;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  padding: 18px;
-  margin-bottom: 26px;
+/* Product Cards */
+.product-card {
   position: relative;
   overflow: hidden;
   border-radius: 12px;
-  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
-  z-index: 1;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.product-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.5s ease;
 }
 
 /* Zoom on hover */
-.card:hover {
-  transform: scale(1.07);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+.product-card:hover img {
+  transform: scale(1.1);
 }
 
-/* Uneven ripple effect */
-.card::before {
-  content: '';
+.product-card:hover {
+  box-shadow: 0 12px 28px rgba(0,0,0,0.4);
+}
+
+/* Overlay with button */
+.overlay {
   position: absolute;
-  top: -25%;
-  left: -25%;
-  width: 150%;
-  height: 150%;
-  background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, transparent 70%);
-  transform: scale(0) skew(15deg, 10deg);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
   opacity: 0;
-  pointer-events: none;
-  transition: transform 0.8s ease-out, opacity 0.4s ease-out;
-  z-index: 2;
-  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.4s ease;
+  border-radius: 12px;
 }
 
-/* Trigger ripple on hover */
-.card:hover::before {
-  transform: scale(2.5) skew(25deg, 15deg);
+.product-card:hover .overlay {
   opacity: 1;
+}
+
+/* Responsive Fixes */
+.img-h {
+  aspect-ratio: 16/9;
+}
+
+.img-v {
+  aspect-ratio: 4/5;
+}
+
+@media (max-width: 768px) {
+  .img-h,
+  .img-v {
+    aspect-ratio: auto;
+    height: auto;
+  }
 }
 
 /******* Our Team ******/
@@ -372,6 +385,7 @@ p.bio {
     margin-top: 15px;
     font-size: 0.9rem;
 }
+
 
 
 
