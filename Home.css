@@ -248,7 +248,7 @@ body{
 
 /* Responsive Fixes */
 .img-h {
-  aspect-ratio: 4/3;
+  aspect-ratio: 3/2;
 }
 
 .img-v {
@@ -385,6 +385,7 @@ p.bio {
     margin-top: 15px;
     font-size: 0.9rem;
 }
+
 
 
 
